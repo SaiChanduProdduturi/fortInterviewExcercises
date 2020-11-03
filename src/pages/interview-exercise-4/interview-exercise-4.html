@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Interview-Exercise-4</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <!-- <img style="max-height: 100%;" src="../../assets/imgs/FORT - assessment - before2.png" alt=""> -->
+
+  <!-- <div class="outerDiv">
+    <div class="innerDiv">
+      <br><br><br><br>
+      <h1 style="color: white; font-size: xxx-large;">FORT</h1>
+    </div>
+  </div>
+
+  <h1 class="tagline">Click Above</h1> -->
+
+  <div  [ngClass]="outerClasses">
+    <div *ngIf="isFirstTransmission" (click)="action()" [ngClass]="innerClasses">
+      <br><br><br><br>
+      <h1 style="color: white; font-size: xxx-large;">FORT</h1>
+    </div>
+  <img *ngIf="isFinalTransmission" class="fade-in" style="height: 170px; width: 170px; 
+  margin-left: 37px; margin-top: 37px;" src="../../assets/imgs/FORT - assessment - after2.png" alt="">
+
+  </div>
+
+  <!-- <img *ngIf="isFinalTransmission" class="fade-in" style="height: 250px; width: 250px;" src="../../assets/imgs/FORT - assessment - after.png" alt=""> -->
+
+  <h1 *ngIf="isFIrstTag" [ngClass]="tagClasses">{{tagLine}}</h1>
+  <h1 *ngIf="isWelComeTag" [ngClass]="welcomeTagClasses">Welcome</h1>
+</ion-content>

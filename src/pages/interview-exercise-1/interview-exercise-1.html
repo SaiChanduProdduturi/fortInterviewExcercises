@@ -1,0 +1,11 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Interview-Exercise-1 - Click any where on the screen and check console..</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <p *ngIf="isSubscribe" (click)="obsFun('subscribe')" class="cmnClass">subscribe</p>
+  <p *ngIf="isUnSubscribe" (click)="obsFun('unsubscibe')" class="cmnClass">cancel</p>
+</ion-content>
