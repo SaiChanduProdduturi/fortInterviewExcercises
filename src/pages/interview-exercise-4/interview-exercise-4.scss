@@ -1,10 +1,9 @@
 page-interview-exercise-4 {
     .outerDiv{
-        height: 250px; width: 250px; border: #3880ff solid 2px; border-radius: 50%;
+      margin-left: 38%; position: relative; height: 250px; width: 250px; border: #3880ff solid 5px; border-radius: 50%;
     }
     .outerDivDashed{
-        height: 250px; width: 250px; border: #3880ff solid 2px; border-radius: 50%;
-        border-style: dashed;
+      margin-left: 38%; position: relative; height: 250px; width: 250px; border: #3880ff dashed 5px; border-radius: 50%; 
     }
     .innerDiv{
         background-color: #213ad0;
@@ -12,18 +11,25 @@ page-interview-exercise-4 {
         height: 230px; 
         width: 230px;
         border-radius: 50%;
-        margin-left: 9px;
-        margin-top: 9px;
+        margin: 2%;
         text-align: center;
+    }
+    .logo{
+      color: white; font-size: xxx-large;
     }
     .tagline{
         margin-top: 6px;
-        margin-left: 50px;
+        margin-left: 45%;
         color: #999;
     }
+    .welcomeTagline{
+      // margin-top: 25px;
+      margin-left: 48%;
+      color: #999;
+    }
     .innerDivTransform {
-        -ms-transform: scale(1.5); /* IE 9 */
-        -webkit-transform: scale(1.5); /* Safari 3-8 */
+        -ms-transform: scale(3.5); /* IE 9 */
+        -webkit-transform: scale(3.5); /* Safari 3-8 */
         transform: scale(3.5); 
     }
 
@@ -131,18 +137,27 @@ page-interview-exercise-4 {
         }
       }
 
-      .border {
+      .outerDivRotate {
+        position: relative;
+        margin-left: 38%;
         height: 250px;
         width: 250px;
-        border: #427feb solid 2px; border-radius: 50%;
-        background: linear-gradient(90deg, #427feb 50%, transparent 50%), linear-gradient(90deg, #427feb 50%, transparent 50%), linear-gradient(0deg, #427feb 50%, transparent 50%), linear-gradient(0deg, blue 50%, transparent 50%);
-        background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
-        background-size: 16px 4px, 16px 4px, 4px 16px, 4px 16px;
-        background-position: 0px 0px, 212px 116px, 0px 116px, 216px 0px;
-        padding: 10px;
-        transition: background-position 2s;
+        border-radius: 50%;
       }
-      .border:hover{
-          background-position: 212px 0px, 0px 116px, 0px 0px, 216px 116px;
+      
+      .outerDivRotate:before {
+        position: absolute;
+        content: '';
+        height: calc(100% + 10px); 
+        width: calc(100% + 10px); 
+        border: 5px dashed #3880ff;
+        border-radius: inherit;
+        animation: spin 10s linear infinite;
+      }
+      
+      @keyframes spin { 
+        100% { 
+          transform: rotateZ(360deg); 
+        }
       }
 }

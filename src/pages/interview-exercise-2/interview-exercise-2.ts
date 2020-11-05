@@ -9,18 +9,11 @@ import { ObservableServiceProvider } from '../../providers/observable-service/ob
   templateUrl: 'interview-exercise-2.html',
 })
 export class InterviewExercise_2Page {
-  isDisable: boolean = false;
-  showError: string;
 
-  constructor(public navCtrl: NavController, public webService:ObservableServiceProvider, public navParams: NavParams) {
-    setTimeout(() => {
-      this.isDisable = true;
-      this.showError = "15 seconds completed request timedout, now please check console."
-    },15000)
-  }
+  constructor(public navCtrl: NavController, public webService:ObservableServiceProvider, 
+    public navParams: NavParams) {}
 
   ngOnInit(){
-    
     this.webService.exampleRequest().subscribe(
       (response) => {
         console.log("Here is the response, It is on time..");
@@ -33,8 +26,5 @@ export class InterviewExercise_2Page {
     )
   }
 
-  ionViewDidLoad() {
-    // console.log('ionViewDidLoad InterviewExercise_2Page');
-  }
 
 }

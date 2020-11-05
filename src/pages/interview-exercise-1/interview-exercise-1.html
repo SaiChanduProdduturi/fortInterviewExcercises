@@ -6,6 +6,6 @@
 </ion-header>
 
 <ion-content padding>
-  <p *ngIf="isSubscribe" (click)="obsFun('subscribe')" class="cmnClass">subscribe</p>
-  <p *ngIf="isUnSubscribe" (click)="obsFun('unsubscibe')" class="cmnClass">cancel</p>
+  <p *ngIf="isSubscribe" (click)="onClick('subscribe')" class="cmnClass">subscribe</p>
+  <p *ngIf="isUnSubscribe" (click)="onClick('unsubscibe')" class="cmnClass">cancel</p>
 </ion-content>

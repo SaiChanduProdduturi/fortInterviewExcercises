@@ -27,11 +27,18 @@ export class InterviewExercise_4Page {
 
   public outerClasses = {
     "outerDiv": this.oDivfirstTransformation,
-    "outerDivDashed": false
+    "outerDivDashed": false,
+    "outerDivRotate": false
   }
 
   public innerClasses = {
     "innerDiv": this.iDivfirstTransformation,
+    "innerDivTransform": false,
+    "fade-out": false
+  }
+
+  public logoClasses = {
+    "logo": true,
     "innerDivTransform": false,
     "fade-out": false
   }
@@ -43,12 +50,18 @@ export class InterviewExercise_4Page {
   }
 
   public welcomeTagClasses = {
-    "tagline": true,
+    "welcomeTagline": true,
     "fade-in": true
   }
 
   action(){
-    // alert('success');
+
+    this.logoClasses = {
+      "logo": true,
+      "innerDivTransform": false,
+      "fade-out": true
+    }
+
     this.innerClasses = {
       "innerDiv": true,
       "innerDivTransform": true,
@@ -58,7 +71,8 @@ export class InterviewExercise_4Page {
     setTimeout(() => {
       this.outerClasses = {
         "outerDiv": false,
-        "outerDivDashed": true
+        "outerDivDashed": true,
+        "outerDivRotate": false
       }
     },5000);
 
@@ -76,7 +90,15 @@ export class InterviewExercise_4Page {
     },7000);
 
     setTimeout(() => {
+      this.outerClasses = {
+        "outerDiv": false,
+        "outerDivDashed": false,
+        "outerDivRotate": true
+      }
       this.isFirstTransmission = false;
+    },8000);
+
+    setTimeout(() => {
       this.isFinalTransmission = true;
     },8000);
     
